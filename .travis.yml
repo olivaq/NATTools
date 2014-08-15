@@ -11,5 +11,5 @@ script:
   - ./bootstrap.sh
   - ./configure --with-check --enable-gcov && make && make check
 after_success:
-  - coveralls --exclude-pattern "\w+\.h" --exclude-pattern "\w+/test" --exclude samplecode --gcov-options '\-lp'
+  - coveralls --exclude-pattern ".+?\.h" --exclude-pattern "\w+/test" --exclude samplecode --gcov-options '\-lp'
 
